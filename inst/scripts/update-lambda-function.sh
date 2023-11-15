@@ -7,7 +7,7 @@ AWS_REGION="$3"
 ACCOUNT_ID="$4"
 # 1. Build the image
 echo "Building container $FUNCTION_NAME-lambda"
-docker build -t $FUNCTION_NAME-lambda .
+docker build --platform=linux/amd64 -t $FUNCTION_NAME-lambda .
 # 2. Tag
 echo "Tagging container $ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$FUNCTION_NAME-lambda:latest"
 docker tag $FUNCTION_NAME-lambda:latest $ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$FUNCTION_NAME-lambda:latest
