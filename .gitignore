@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+R/test_bed.R
+inst/scripts/update-network-permissions.sh
+inst/lambda_funs
+config.yml
