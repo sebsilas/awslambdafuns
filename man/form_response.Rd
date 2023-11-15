@@ -4,10 +4,10 @@
 \alias{form_response}
 \title{Formulate an API response}
 \usage{
-form_response(status, message)
+form_response(status, message, other = list())
 }
 \arguments{
-\item{message}{}
+\item{other}{}
 }
 \description{
 Formulate an API response

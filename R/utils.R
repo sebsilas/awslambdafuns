@@ -4,13 +4,16 @@
 #'
 #' @param status
 #' @param message
+#' @param other
 #'
 #' @return
 #' @export
 #'
 #' @examples
-form_response <- function(status, message){
+form_response <- function(status, message, other = list()){
 
-  response <- list(status = status, message = message)
+  response <- c(list(status = status, message = message), other)
+
   jsonlite::toJSON(response, auto_unbox = TRUE)
+
 }
