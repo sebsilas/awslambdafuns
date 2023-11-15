@@ -14,3 +14,5 @@ Imports:
     glue,
     magrittr,
     readr
+URL: https://github.com/sebsilas/awslambdafuns
+BugReports: https://github.com/sebsilas/awslambdafuns/issues
