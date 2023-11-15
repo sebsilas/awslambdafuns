@@ -12,7 +12,7 @@ REQUEST_PARAMETER="$5"
 LAMBDA_ARN="$6"
 # Stage to deploy API to
 DEPLOYMENT_STAGE="$7"
-# Example invocation ./create-api-integration.sh lucid-ranking recommend-survey eu-west-2 userid arn:aws:lambda:eu-west-2:892713415261:function:lucid-ranking test
+# Example invocation ./create-api-integration.sh profile-name api-name resource-name eu-west-2 userid arn:aws:lambda:eu-west-2:1234567:function:my-function test
 
 # 1. Sucessful api creation returns a json with the name and id of the api
 echo creating API $API_NAME in region $AWS_REGION

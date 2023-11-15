@@ -100,8 +100,8 @@ do_lambda_fun <- function(script,
 
 
 update_network_permissions <- function(function_name,
-                                       subnet_ids = c("subnet-01b92deebd28a3758", "subnet-011766942b356235e"),
-                                       security_group_ids = "sg-0115d70004551b14b") {
+                                       subnet_ids =  strsplit(Sys.getenv("SUBNET_IDS"), split = ",")[[1]],
+                                       security_group_ids = strsplit(Sys.getenv("SECURITY_GROUPS"), split = ",")[[1]]) {
   # This comes from update-network-permissions.sh, but shell scripts are not good at taking arrays as input.
   # So we do this slightly differently:
 

@@ -3,6 +3,7 @@
 .Rdata
 .httr-oauth
 .DS_Store
+.Renviron
 R/test_bed.R
 inst/scripts/update-network-permissions.sh
 inst/lambda_funs
