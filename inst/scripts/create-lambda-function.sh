@@ -17,7 +17,7 @@ aws --profile $AWS_PROFILE ecr create-repository --repository-name $FUNCTION_NAM
 --image-scanning-configuration scanOnPush=true --region $AWS_REGION
 # 2. Build the image
 echo "Building container $FUNCTION_NAME-lambda"
-docker build -t $FUNCTION_NAME-lambda .
+docker build --platform=linux/amd64 -t $FUNCTION_NAME-lambda .
 # 3. Tag
 echo "Tagging container $ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$FUNCTION_NAME-lambda:latest"
 docker tag $FUNCTION_NAME-lambda:latest $ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$FUNCTION_NAME-lambda:latest

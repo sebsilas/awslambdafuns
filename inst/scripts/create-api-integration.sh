@@ -73,11 +73,11 @@ aws --profile $AWS_PROFILE apigateway put-integration --region $AWS_REGION \
 #  --request-templates '{"application/json":"{\"UserId\":\"$input.params('userid')\"}"}'
 
 # 10. Grant the API permission to invoke the lambda function
-# echo editing $LAMBDA_ARN permissions so it can be invoked by api-gateway apis
-# aws --profile $AWS_PROFILE lambda add-permission --statement-id $API_NAME-proxy \
-# --principal apigateway.amazonaws.com \
-# --function-name $LAMBDA_ARN \
-# --action lambda:InvokeFunction
+echo editing $LAMBDA_ARN permissions so it can be invoked by api-gateway apis
+aws --profile $AWS_PROFILE lambda add-permission --statement-id $API_NAME-proxy \
+--principal apigateway.amazonaws.com \
+--function-name $LAMBDA_ARN \
+--action lambda:InvokeFunction
 
 
 # 11. Set up integration response to pass lambda function output to

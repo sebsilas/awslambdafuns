@@ -14,6 +14,7 @@ form_response <- function(status, message, other = list()){
 
   response <- c(list(status = status, message = message), other)
 
-  jsonlite::toJSON(response, auto_unbox = TRUE)
+  return(response)
+  #jsonlite::toJSON(response, auto_unbox = TRUE, pretty = TRUE)
 
 }
